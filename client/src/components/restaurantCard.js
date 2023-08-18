@@ -62,7 +62,7 @@ export default function RecipeReviewCard() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-          Making <br/>some<br/> of<br/> Londons<br/> best<br/> burgers<br/> since<br/> 2014.<br/> Bill<br/> or<br/> Beak,<br/> its<br/> one<br/> hell <br/>of <br/>a <br/>question
+          Making <br/>some<br/> of<br/> London's<br/> best<br/> burgers<br/> since<br/> 2014.<br/> Bill<br/> or<br/> Beak,<br/> its<br/> one<br/> hell <br/>of <br/>a <br/>question
           </Typography>
         </CardContent>
       </Collapse>

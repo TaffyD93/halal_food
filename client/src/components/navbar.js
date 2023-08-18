@@ -5,17 +5,20 @@ export default function Navbar() {
     
     return (
         <nav className="nav">
-            <div className="site">
-            <Link to="/home" className="site-name">Halal Food Finder</Link>
-            <p className="est">Est. 2023</p>
+            <div className="nav-content">
+                <div className="site">
+                    <Link to="/home" className="site-name">Halal Food Finder</Link>
+                    <p className="est">Est. 2023</p>
+                </div>
+                    <hr />
+                <ul>
+                    <CustomLink to="/home">Home</CustomLink>
+                    <CustomLink to="/restaurant">Restaurants</CustomLink>
+                    <CustomLink to="/map">Map</CustomLink>
+                    <CustomLink to="/recommendation">Recommendation</CustomLink>
+                    <CustomLink to="/sign_in">Sign In</CustomLink>
+                </ul>
             </div>
-            <ul>
-                <CustomLink to="/home">Home</CustomLink>
-                <CustomLink to="/restaurant">Restaurants</CustomLink>
-                <CustomLink to="/map">Map</CustomLink>
-                <CustomLink to="/recommendation">Recommendation</CustomLink>
-                <CustomLink to="/sign_in">Sign In</CustomLink>
-            </ul>
         </nav>
     )
 }

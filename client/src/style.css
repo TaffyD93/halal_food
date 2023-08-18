@@ -8,12 +8,13 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #76b852;
+  background-color: rgba(0, 144, 0, 0.2);
 }
 
 .container{
   margin: 1rem;
   position: relative;
+  padding: 1rem;
 }
 
 .content-container{
@@ -24,21 +25,32 @@ body {
 /* NavBar */
 
 .nav {
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  width: auto;
 }
 
+.nav-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Site Name */
+
 .site{
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .est{
@@ -48,6 +60,15 @@ body {
 
 .site-name {
   font-size: 2rem;
+  text-align: center;
+}
+
+/* Nav options */
+
+.nav hr{
+  width: 60%;
+  height: 5px;
+  background-color: #000000;
 }
 
 .nav ul {
@@ -55,7 +76,7 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 10em;
 }
 
 .nav a {
@@ -68,27 +89,23 @@ body {
 }
 
 .nav li.active{
-  border-style: solid;
-}
-
-.nav li:hover {
-  background-color: coral;
+  font-weight: bolder;
+  font-size: large;
+  transition: 1s;
 }
 
 /* Footer */
 
 .footer {
-  display: block;
   position:fixed;
   bottom: 0;
   left: 0;
-  color: white;
-  background-color: black;
+  color: #000000;
+  background-color: #ffffff;
   width: 100%;
-  padding: 1px;
   text-align: center;
   height: 100px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer p{
@@ -108,6 +125,8 @@ body {
 
 .home-container{
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
 .pictureChange{
@@ -117,20 +136,35 @@ body {
 }
 
 .pictureChange p{
+  text-align: center;
   border-style: solid;
+  border-radius: 7px;
 }
 
 .homeImage{
   height: 400px;
   width: 400px;
-  align-items: start;
+  border-radius: 7px;
 }
 
 .homeText{
   border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 200px;
   width: 600px;
   margin-top: 150px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 7px;
 }
 
 .homeButton{
@@ -138,25 +172,46 @@ body {
   margin: 10px;
   color: black;
   background-color: white;
+  gap: 10rem;
+  border-radius: 7px;
+}
+
+/* Restaurant page */
+
+.restaurant-layout{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
 }
 
 /* Filter */
 
 .side-filter{
-  display: block;
-  float: left;
+  display: flex;
+  flex-direction: column;
   border-style: solid;
   height: 400px;
   width: 200px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .filter-header{
-  color: white;
+  color: black;
+  text-align: center;
+}
+
+.cuisine h3{
+  text-align: start;
+  margin: 1px;
+  margin-left: 5px;
 }
 
 .cuisine{
   list-style: none;
+  padding: 0%;
+  text-align: center;
+  margin: 0px;
 }
 
 /* Restaurant Card */
@@ -164,7 +219,7 @@ body {
 .restaurant-card{
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 

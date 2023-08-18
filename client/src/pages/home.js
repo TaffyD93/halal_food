@@ -8,8 +8,10 @@ export default function Home({ items }) {
         <div className='homeText'>
             <h1> Welcome to Halal Food Finder! </h1>
             <p>This is a site that'll help you find all halal food around central London.</p>
-            <button className='homeButton'>Random recommendation</button>
-            <button className='homeButton'>Restaurant</button>
+            <div className='button'>
+              <button className='homeButton'>Random recommendation</button>
+              <button className='homeButton'>Restaurant</button>
+            </div>
         </div>
     </div>
   );
