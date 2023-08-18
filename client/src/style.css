@@ -8,26 +8,34 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: limegreen;
+  background-color: #76b852;
 }
 
 .container{
   margin: 1rem;
-  text-align: center;
+  position: relative;
 }
 
+.content-container{
+
+  height: auto;
+}
+
+/* NavBar */
+
 .nav {
-  background-color: white;
-  color: black;
+  background-color: #000000;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
 }
+
 .site{
-  background-color: white;
-  color: black;
+  background-color: #000000;
+  color: white;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
@@ -60,23 +68,27 @@ body {
 }
 
 .nav li.active{
-  background-color: orange;
+  border-style: solid;
 }
 
 .nav li:hover {
   background-color: coral;
 }
 
+/* Footer */
+
 .footer {
-  position: fixed;
-  color: white;
-  background-color: black;
+  display: block;
+  position:fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  color: white;
+  background-color: black;
+  width: 100%;
   padding: 1px;
   text-align: center;
   height: 100px;
+  padding: 20px;
 }
 
 .footer p{
@@ -91,6 +103,8 @@ body {
 .icon li{
   list-style: none;
 }
+
+/* Home page */
 
 .home-container{
     display: flex;
@@ -126,9 +140,112 @@ body {
   background-color: white;
 }
 
+/* Filter */
+
+.side-filter{
+  display: block;
+  float: left;
+  border-style: solid;
+  height: 400px;
+  width: 200px;
+  text-align: center;
+}
+
+.filter-header{
+  color: white;
+}
+
+.cuisine{
+  list-style: none;
+}
+
+/* Restaurant Card */
+
 .restaurant-card{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+}
+
+/* Sign In page */
+
+:root {
+  --primary-light-hsl: 0, 100%, 90%;
+  --primary-hsl: 0, 100%, 50%;
+  --primary-dark-hsl: 0, 100%, 6%
+}
+
+.login-container-page{
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.login-container{
+  --color: hsl(var(--primary-light-hsl), .8);
+  background-color: var(--color);
+  box-shadow: 0 0 15px 0 var(--color);
+  padding: 1rem;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  gap: 0px;
+}
+
+.register{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register input{
+  font-size: 1.25rem;
+  padding: 10px;
+  background-color: hsl(var(--primary-light-hsl));
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+
+.register input:hover{
+  box-shadow: 0 0 2px 1px #000000;
+}
+
+.register input:focus{
+  box-shadow: 0 0 2px 1px #000000;
+}
+
+.login input{
+  font-size: 1.25rem;
+  padding: 10px;
+  background-color: hsl(var(--primary-light-hsl));
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+
+.login input:hover{
+  box-shadow: 0 0 2px 1px #000000;
+}
+
+.login input:focus{
+  box-shadow: 0 0 2px 1px #000000;
 }
