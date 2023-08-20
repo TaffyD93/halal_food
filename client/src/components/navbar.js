@@ -7,12 +7,12 @@ export default function Navbar() {
         <nav className="nav">
             <div className="nav-content">
                 <div className="site">
-                    <Link to="/home" className="site-name">Halal Food Finder</Link>
+                    <Link to="/" className="site-name">Halal Food Finder</Link>
                     <p className="est">Est. 2023</p>
                 </div>
                     <hr />
                 <ul>
-                    <CustomLink to="/home">Home</CustomLink>
+                    <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/restaurant">Restaurants</CustomLink>
                     <CustomLink to="/map">Map</CustomLink>
                     <CustomLink to="/recommendation">Recommendation</CustomLink>

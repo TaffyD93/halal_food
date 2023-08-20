@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {React, useState} from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -23,15 +23,22 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
+export default function RestaurantCard() {
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
-    <Card sx={{ maxWidth: 250 }}>
+    <Card sx={{
+      bgcolor: 'rgba(255, 255, 255, 0.7)',
+      boxShadow: 1,
+      borderRadius: 2,
+      minWidth: "30%",
+      maxWidth: "30%",
+      width: "200px"
+    }}>
       <CardHeader
         title="Bill or Beak"
       />
@@ -59,10 +66,10 @@ export default function RecipeReviewCard() {
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout="auto" unmountOnExit >
         <CardContent>
           <Typography paragraph>
-          Making <br/>some<br/> of<br/> London's<br/> best<br/> burgers<br/> since<br/> 2014.<br/> Bill<br/> or<br/> Beak,<br/> its<br/> one<br/> hell <br/>of <br/>a <br/>question
+          Making some of London's best burgers since 2014. Bill or Beak, its one hell of a question
           </Typography>
         </CardContent>
       </Collapse>

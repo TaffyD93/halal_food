@@ -1,10 +1,10 @@
 import React from 'react';
-import Carousel from '../components/carousel';
+import HomeCarousel from '../components/carousel';
 
 export default function Home({ items }) {
   return (
     <div className='home-container'>
-        <Carousel />
+        <HomeCarousel/>
         <div className='homeText'>
             <h1> Welcome to Halal Food Finder! </h1>
             <p>This is a site that'll help you find all halal food around central London.</p>

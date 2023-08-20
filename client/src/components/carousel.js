@@ -1,98 +1,31 @@
-import React, { useState } from 'react';
-
-import image1 from '../images/Bill_or_beak.jpeg';
+import React from 'react';
+// import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Carousel } from 'react-responsive-carousel'; // Import Carousel component
+import image1 from '../images/Bill_or_beak.jpeg'; // Import your images
 import image2 from '../images/fried-chicken_2.0.jpeg';
 import image3 from '../images/chicken-shawarma.jpeg';
 
-const imagesList = [
-    {
-        id: 1,
-        src: image1,
-        alt: "bill_or_beak",
-    },
-    {
-        id: 2,
-        src: image2,
-        alt: "fried chicken",
-    },
-    {
-        id: 3,
-        src: image3,
-        alt: "chicken shawarma",
-    },
-];
+export default function HomeCarousel() {
+        return (
+          <>
+          <div className='homeImage'>
+            <Carousel dynamicHeight={true} autoPlay={true} showStatus={false} showThumbs={false} >
+                <div>
+                    <img src={image1} alt='Bob Burger' />
+                    <p className="legend">Bill or beak</p>
+                </div>
+                <div>
+                    <img src={image2} alt='Chicken'/>
+                    <p className="legend">Chicken Shop</p>
+                </div>
+                <div>
+                    <img src={image3} alt="shawarma" />
+                    <p className="legend">ShakeShuka</p>
+                </div>
+            </Carousel>
+            </div>
+            </>
+        );
+    }
 
-export default function ImageComponent() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const changeImage = () => {
-    const randomNumber = Math.floor(Math.random() * imagesList.length);
-    setCurrentImageIndex(randomNumber);
-  };
-
-  return (
-    <div className='pictureChange'>
-      <img className='homeImage' onClick={changeImage}
-        src={imagesList[currentImageIndex].src}
-        alt={imagesList[currentImageIndex].alt}
-      />
-      <p>Click the picture!</p>
-    </div>
-  );
-}
-
-
-
-
-
-
-
-//const imagesList = [
-//    {
-  //      id: 1,
-    //    src: image1,
-      //  alt: "bill_or_beak",
-   // },
-//    {
-  //      id: 2,
-    //    src: image2,
-      //  alt: "fried chicken",
-   // },
-//    {
-  //      id: 3,
-    //    src: image3,
-      //  alt: "noodle_soup",
-   // },
-//    {
-  //      id: 4,
-    //    src: image4,
-      //  alt: "shawarma",
-   // }
-//]
-
-//export default function Image() {
-//    this.changeImage();
-//    }
-
-//    changeImage = () => {
-  //      const randomNumber = Math.floor(Math.random() * imagesList.length);
-    //    this.setState({
-      //      currentImageIndex: randomNumber
-        //});
-//    }
-  //  <Image
-    //source={imagesList[this.state.currentImageIndex]}
-    //style={styles.imageStyle}
-  ///>
-
-
-
-
-
-//    return (
-//        <div>
-//          {imagesList.map((image) => (
-//            <img className='homeImage' key={image.id} src={image.src} alt={image.alt} />
-//          ))}
-//        </div>
-//      );

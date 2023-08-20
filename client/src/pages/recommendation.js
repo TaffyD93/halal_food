@@ -1,3 +1,9 @@
+import React from "react"
+import RecommendationSelection from "../components/recommendation"
+
 export default function Recommendation() {
-    return <h1>Recommendation</h1>
+    return(
+            <RecommendationSelection />
+    )
+
 }
