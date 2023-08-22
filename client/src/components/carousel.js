@@ -10,7 +10,7 @@ export default function HomeCarousel() {
         return (
           <>
           <div className='homeImage'>
-            <Carousel dynamicHeight={true} autoPlay={true} showStatus={false} showThumbs={false} >
+            <Carousel dynamicHeight={true} autoPlay={true} showStatus={false} showThumbs={false} infiniteLoop={true} >
                 <div>
                     <img src={image1} alt='Bob Burger' />
                     <p className="legend">Bill or beak</p>
