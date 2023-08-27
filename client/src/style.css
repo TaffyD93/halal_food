@@ -11,16 +11,6 @@ body {
   background-color: rgba(0, 144, 0, 0.2);
 }
 
-/* .container{
-  margin: 1rem;
-  position: relative;
-  padding: 1rem;
-} */
-
-/* .content-container{
-  height: auto;
-} */
-
 /* NavBar */
 
 .nav {
@@ -75,7 +65,7 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 10em;
+  gap: 10rem;
 }
 
 .nav a {
@@ -183,18 +173,17 @@ body {
 .restaurant-page{
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   padding: 1%;
+  justify-content: space-evenly;
 }
 
 /* Filter */
 
 .filter{
-  display: flex;
   min-height: 100px;
   height: 50%;
-  min-width: 75px;
-  width: 20%;
+  min-width: 150px;
+  width: 50%;
   border-style: solid;
   margin: 1%;
   padding: 0;

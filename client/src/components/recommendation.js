@@ -1,8 +1,8 @@
 //import { useState } from "react"
 
-const cuisine = [{id: 1, name: "American"}, {id: 2, name: "Chinese"}, {id: 3, name: "Italian"},{id: 4, name: "Middle Eastern"}, {id: 5, name: "Fast Food"}]
+const cuisine = [{id: 1, name: "Burger"}, {id: 2, name: "Chinese"}, {id: 3, name: "Indian"},{id: 4, name: "Middle Eastern"}, {id: 5, name: "Fast Food"}]
 const halal = [{id: 1, name:"Fully Halal"}, {id: 2, name:"Partly Halal"}]
-const location = [{id: 1, name:"Baker Street"}, {id: 2, name:"Leicester Square"}, {id: 3, name:"London Bridge"}, {id: 4, name:"China Town"}, {id: 5, name:"Camden Market"}]
+const location = [{id: 1, name:"Marylebone"}, {id: 2, name:"Soho"}, {id: 3, name:"Mayfair"}, {id: 4, name:"Kings Cross"}, {id: 5, name:"Camden Market"}]
 
 export default function RecommendationSelection() {
     return(

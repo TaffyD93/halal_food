@@ -1,18 +1,65 @@
 //import RestaurantSearch from "../components/filter"
-import Card from "../components/restaurantCard"
+//import Card from "../components/restaurantCard"
 import Filter from "../components/filter"
+import { useState, useEffect } from "react"
+import Axios from "axios"
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import image1 from '../images/Bill_or_beak.jpeg'
+
+
 
 export default function Restaurant() {
+
+
+    const [restaurantList, setRestaurantList]=useState([])
+    useEffect(() => {
+        Axios.get("http://localhost:3001/restaurants").then((response) => {
+            setRestaurantList(response.data)
+        })
+    },[])
+
     return(
         <div className="restaurant-page">
             <Filter />
                 <div className="restaurant-card">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                {restaurantList.map((val, key) => {
+                    return(
+                        <Card sx={{
+      bgcolor: 'rgba(255, 255, 255, 0.7)',
+      boxShadow: 1,
+      borderRadius: 2,
+      minWidth: "150px",
+      width: "30%"
+    }} key={val.restaurant_id}>
+      <CardHeader
+        title={val.restaurant_name}
+      />
+      <CardMedia
+        component="img"
+        height="200px"
+        image={image1}
+        alt={val.restaurant_name}
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          {val.restaurant_location}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
+                    )
+                })}
                 </div>
         </div>
     )
