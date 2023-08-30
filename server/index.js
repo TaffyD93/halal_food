@@ -5,6 +5,7 @@ const axios = require('axios')
 const cors = require('cors')
 
 const app = express()
+app.use(express.json());
 
 app.use(cors({
   origin: ["http://localhost:3000"],
@@ -27,6 +28,46 @@ var con = mysql.createConnection({
     console.log("Connected!");
   });
 
+/* Register new user */
+
+app.post('/register', (req, res) => {
+
+  const username = req.body.username;
+  const password = req.body.password;
+
+  con.query(
+    "INSERT INTO users (username, password) VALUES (?,?)", 
+    [username, password], 
+    (err, result) => {
+      console.log("The error is...", err);
+    }
+  );
+});
+
+/* Log in */
+
+app.post('/login', (req, res) => {
+
+  const username = req.body.username;
+  const password = req.body.password;
+
+  con.query(
+    "SELECT * FROM users WHERE username = ? AND password = ?", 
+    [username, password], 
+    (err, result) => {
+      if (err) {
+        console.log({err: err});
+      }
+
+      if (result.length > 0) {
+        res.send(result);
+      }else{
+        res.send({message: "Invalid Username or Password"});
+      }
+    }
+  );
+});
+
 
 app.listen(3001, () => {
     console.log("running on port 3001");
@@ -47,6 +88,8 @@ app.get('/sign_in', (req, res) => {
 //     }
 //   })
 // })
+
+/* Restaurant page */
 
 app.get('/restaurants', (req, res) => {
   const id = req.params.id
