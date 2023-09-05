@@ -18,7 +18,7 @@ import image1 from '../images/Bill_or_beak.jpeg'
 export default function Restaurant() {
 
 
-    const [restaurantList, setRestaurantList]=useState([])
+    const [restaurantList, setRestaurantList] = useState([])
     useEffect(() => {
         Axios.get("http://localhost:3001/restaurants").then((response) => {
             setRestaurantList(response.data)

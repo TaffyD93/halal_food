@@ -70,7 +70,7 @@ app.post('/login', (req, res) => {
 
 
 app.listen(3001, () => {
-    console.log("running on port 3001");
+    console.log("Running on port 3001");
 });
 
 app.get('/sign_in', (req, res) => {
@@ -102,3 +102,23 @@ app.get('/restaurants', (req, res) => {
     }
   })
 })
+
+/* Suggestion page */
+
+app.post('/suggestion', (req, res) => {
+  const choiceOne = req.body.choiceOne;
+  const choiceTwo = req.body.choiceTwo;
+  const choiceThree = req.body.choiceThree;
+
+  console.log('Received data in the request body:', req.body.choiceOne, req.body.choiceTwo, req.body.choiceThree,);
+  con.query(
+    "SELECT * FROM restaurants WHERE restaurant_cuisine = ? AND restaurant_halal = ? AND restaurant_location = ?",
+    [choiceOne,choiceTwo,choiceThree], (err,result)=>{
+      if(err){
+        console.log(err);
+      }else{
+        console.log(req.body.locationChoice)
+        res.send(result)
+      }
+    })
+}) 

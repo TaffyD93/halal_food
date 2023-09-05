@@ -31,27 +31,6 @@ body {
   align-items: center;
 }
 
-/* Site Name */
-
-.site{
-  background-color: #ffffff;
-  color: #000000;
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.est{
-  font-size: 12px;
-  text-align: center;
-}
-
-.site-name {
-  font-size: 2rem;
-  text-align: center;
-}
-
 /* Nav options */
 
 .nav hr{
@@ -83,6 +62,27 @@ body {
   transition: 1s;
 }
 
+/* Site Name */
+
+.site{
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.est{
+  font-size: 12px;
+  text-align: center;
+}
+
+.site-name {
+  font-size: 2rem;
+  text-align: center;
+}
+
 /* Footer */
 
 .footer {
@@ -111,13 +111,13 @@ body {
 /* Home page */
 
 .home-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1%;
-    height: 80vh;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1%;
+  height: 80vh;
+}
 
 .pictureChange{
   margin-top: 50px;
@@ -220,15 +220,15 @@ body {
 
 /* Map */
 
-/* Recommendation */
+/* Suggestion */
 
-.recommendation{
+.suggestion{
   text-align: center;
   padding: 1%;
   height: 100vh;
 }
 
-.recommendation ul{
+.suggestion ul{
   padding: 0;
 }
 
@@ -242,21 +242,41 @@ body {
   min-width: 100px;
 }
 
-.recommendation li{
+.clicked{
+  color: blue;
+}
+
+.suggestion button{
   list-style: none;
   border-style: solid;
   border-radius: 7px;
   width: 200px;
   margin-top: 23px;
-  padding: 1%;
+  padding: 3%;
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
 
-.recommendation li:hover{
+.suggestion button:hover{
   background-color: rgba(18, 189, 18, 0.5);
 }
 
+.submit{
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 15px 0 var(--color);
+  padding: 1% !important;
+  font-size: large;
+  width: 80%;
+  max-width: 200px;
+  /* height: 15%;
+  max-height: 100px; */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.submit:hover{
+  background-color: rgba(18, 189, 18, 0.5);
+}
 
 /* Sign In page */
 
@@ -296,6 +316,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.log-submit{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px 0 var(--color);
+  border-radius: 10px;
+}
+
+.log-switch{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px 0 var(--color);
+  border-radius: 10px;
+  width: 100%;
+  height: 15%;
+  max-height: 100px;
 }
 
 .login{

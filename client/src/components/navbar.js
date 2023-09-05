@@ -15,7 +15,7 @@ export default function Navbar() {
                     <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/restaurant">Restaurants</CustomLink>
                     <CustomLink to="/map">Map</CustomLink>
-                    <CustomLink to="/recommendation">Recommendation</CustomLink>
+                    <CustomLink to="/suggestion">Suggestion</CustomLink>
                     <CustomLink to="/sign_in">Sign In</CustomLink>
                 </ul>
             </div>

@@ -57,11 +57,12 @@ export default function SignIn() {
                                     setPasswordLog(e.target.value);
                                 }}
                                 />
-                                <button className="submit" onClick={logIn}> Log In </button>
+                                <button className="log-submit" onClick={logIn}> Log In </button>
                             </div>
                         </form>
-                        <button onClick={isLogin}>register</button>
+                        <button className="log-switch" onClick={isLogin}>register</button>
                     </div>
+                    <h1>Welcome back {loginStatus}</h1>
                 </div>
             )
         }else{
@@ -83,12 +84,11 @@ export default function SignIn() {
                                     setPasswordReg(e.target.value);
                                 }}
                                 />
-                                <button className="submit" onClick={register}> Register </button>
+                                <button className="log-submit" onClick={register}> Register </button>
                             </div>
                         </form>
-                        <button onClick={isLogin}>login</button>
+                        <button className="log-switch" onClick={isLogin}>login</button>
                     </div>
-                    <h1>{loginStatus}</h1>
                 </div>
             )
         }       
