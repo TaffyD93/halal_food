@@ -19,7 +19,7 @@ var con = mysql.createConnection({
     host: "localhost",
     port: "3306",
     user: "root",
-    password: "Dhanji010293!",
+    password: "", //enter password when you begin
     database: "halalfood"
   });
   
