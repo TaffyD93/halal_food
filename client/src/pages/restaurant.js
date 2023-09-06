@@ -12,11 +12,14 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import image1 from '../images/Bill_or_beak.jpeg'
+import image2 from '../images/chicken-shawarma.jpeg'
+import image3 from '../images/fried-chicken_2.0.jpeg'
 
 
 
 export default function Restaurant() {
 
+    const foodImages = [image1, image2, image3]
 
     const [restaurantList, setRestaurantList] = useState([])
     useEffect(() => {
@@ -44,7 +47,9 @@ export default function Restaurant() {
       <CardMedia
         component="img"
         height="200px"
-        image={image1}
+        image={foodImages.map((key) => (
+          <img src={key} />
+        ))}
         alt={val.restaurant_name}
       />
       <CardContent>

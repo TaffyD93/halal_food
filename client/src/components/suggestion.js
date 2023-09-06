@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Axios from "axios"
-//import { Button } from "@mui/material"
 
 const cuisine = [{id: 1, name: "Burger"}, {id: 2, name: "Chinese"}, {id: 3, name: "Indian"},{id: 4, name: "Middle Eastern"}, {id: 5, name: "Fast Food"}]
 const halal = [{id: 1, name:"Halal"}, {id: 2, name:"Partly Halal"}]
@@ -103,6 +102,4 @@ export default function SuggestionSelection() {
     ) 
 }
 
-//make an object array of the buttons
-//set a query to each button
-//map though buttons
+
