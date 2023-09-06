@@ -121,4 +121,4 @@ app.post('/suggestion', (req, res) => {
         res.send(result)
       }
     })
-}) 
+})
